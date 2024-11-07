@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:12
+    container_name: app_socorro_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: iUBW5IUsIUBiuBWI4U5Bç45ubX5I5WU4b5I4UlB5
+      POSTGRES_DB: socorro_ms_user_db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  db-data:
+    driver: local
+
