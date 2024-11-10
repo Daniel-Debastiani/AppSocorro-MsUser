@@ -33,7 +33,6 @@ public class UserService {
         UserEntity userEntity = userMapper.userCreateDtoToUserEntity(userCreateDto);
         UserEntity newUser = userRepository.save(userEntity);
         UserResponseDto userResponseDto = userMapper.userEntityToUserResponseDto(newUser);
-        userResponseDto.setToken(this.tokenService.generateToken(newUser));
         return ResponseEntity.status(201).body(userResponseDto);
     }
 

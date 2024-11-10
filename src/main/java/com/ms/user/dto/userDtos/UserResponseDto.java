@@ -1,10 +1,13 @@
 package com.ms.user.dto.userDtos;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserResponseDto {
     private Integer id;
     private String name;
@@ -16,5 +19,4 @@ public class UserResponseDto {
     private String address;
     private Boolean verified;
     private Boolean softDeleted;
-    private String token;
 }
